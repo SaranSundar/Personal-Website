@@ -1,0 +1,12 @@
+.wrapResume {
+    background-color: white;
+    overflow-y:visible !important;
+}
+
+#wrap {
+    overflow-y:visible !important;
+}
+
+* {
+    overflow-y:visible !important;
+}
