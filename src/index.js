@@ -10,6 +10,7 @@ import Resume from "./components/Resume";
 import 'bulma/css/bulma.css'
 import './css/index.css'
 import NavBar from "./components/NavBar";
+import Portfolio from "./components/Portfolio";
 
 ReactDOM.render(
     <BrowserRouter>
@@ -18,6 +19,7 @@ ReactDOM.render(
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/aboutme" component={AboutMe}/>
+                <Route exact path="/portfolio" component={Portfolio}/>
                 <Route exact path="/resume" component={Resume}/>
                 <Route component={NotFound}/>
             </Switch>

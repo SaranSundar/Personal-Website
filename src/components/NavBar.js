@@ -37,6 +37,9 @@ class NavBar extends Component {
                             <Link className="navbar-item" to="/aboutme">
                                 About Me
                             </Link>
+                            <Link className="navbar-item" to="/portfolio">
+                                Portfolio
+                            </Link>
                             <Link className="navbar-item" to="/resume">
                                 Resume
                             </Link>
