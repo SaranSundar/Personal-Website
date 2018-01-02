@@ -1,13 +1,25 @@
 @import url('http://fonts.googleapis.com/css?family=Alegreya+Sans:300');
 
+@font-face {
+    font-family: 'Raleway';
+    src: url("../fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Raleway-semibold';
+    src: url("../fonts/Raleway-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: 'Raleway-bold';
+    src: url("../fonts/Raleway-Bold.ttf");
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-}
-
-* {
-    overflow: hidden !important;
+    font-family: 'Raleway', sans-serif;
+    background-color: white;
 }
 
 .loadImage {

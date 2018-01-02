@@ -1,6 +1,12 @@
 import React, {Component} from 'react';
+import $ from "jquery";
 
 class AboutMe extends Component {
+
+    componentDidMount() {
+        $('*').css({'overflow': 'hidden'});
+    }
+
     render() {
         return (
 

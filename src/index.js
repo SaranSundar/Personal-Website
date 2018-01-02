@@ -7,8 +7,10 @@ import AboutMe from "./components/AboutMe";
 import NotFound from "./components/NotFound";
 import Resume from "./components/Resume";
 
+import 'normalize.css'
 import 'bulma/css/bulma.css'
 import './css/index.css'
+
 import NavBar from "./components/NavBar";
 import Portfolio from "./components/Portfolio";
 

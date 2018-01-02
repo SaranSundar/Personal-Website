@@ -9,7 +9,7 @@ body {
 
 .shimmer {
     color: rgba(255, 255, 255, 0.8) !important;
-    background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) ;
+    background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
     background: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
     background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
     -webkit-background-size: 125px 100%;

@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
-import '../css/shimmercss.css'
+import $ from 'jquery'
+
 
 class Home extends Component {
+
+    componentDidMount() {
+        $('*').css({'overflow': 'hidden'});
+    }
 
 
     render() {

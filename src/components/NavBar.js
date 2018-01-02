@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import github_cat from '../drawables/github_cat.svg'
 import $ from 'jquery';
-import '../css/shimmercss.css'
 
 
 class NavBar extends Component {
