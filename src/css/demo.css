@@ -1,11 +1,23 @@
-*,
-*::after,
-*::before {
+/* line 1, C:/Users/chris/Desktop/test.scss */
+#gallery {
+    /* Icons */
+    /* Header */
+    /* GitHub corner */
+    /* Top Navigation Style */
+    /* Controls */
+    /* Grid */
+}
+
+/* line 2, C:/Users/chris/Desktop/test.scss */
+#gallery *,
+#gallery *::after,
+#gallery *::before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-body {
+/* line 9, C:/Users/chris/Desktop/test.scss */
+#gallery body {
     font-family: 'Roboto Mono', monospace;
     font-size: 14px;
     font-weight: 500;
@@ -15,14 +27,16 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-.js .loading::before,
-.js .loading::after {
+/* line 19, C:/Users/chris/Desktop/test.scss */
+#gallery .js .loading::before,
+#gallery .js .loading::after {
     content: '';
     position: fixed;
     z-index: 1000;
 }
 
-.loading::before {
+/* line 26, C:/Users/chris/Desktop/test.scss */
+#gallery .loading::before {
     top: 0;
     left: 0;
     width: 100%;
@@ -30,7 +44,8 @@ body {
     background: #2c2d31;
 }
 
-.loading::after {
+/* line 34, C:/Users/chris/Desktop/test.scss */
+#gallery .loading::after {
     top: 50%;
     left: 50%;
     width: 40px;
@@ -48,18 +63,21 @@ body {
     }
 }
 
-a {
+/* line 52, C:/Users/chris/Desktop/test.scss */
+#gallery a {
     text-decoration: none;
     color: #f2f2f2;
     outline: none;
 }
 
-a:hover,
-a:focus {
+/* line 58, C:/Users/chris/Desktop/test.scss */
+#gallery a:hover,
+#gallery a:focus {
     color: #e6629a;
 }
 
-.hidden {
+/* line 63, C:/Users/chris/Desktop/test.scss */
+#gallery .hidden {
     position: absolute;
     overflow: hidden;
     width: 0;
@@ -67,13 +85,14 @@ a:focus {
     pointer-events: none;
 }
 
-main {
+/* line 71, C:/Users/chris/Desktop/test.scss */
+#gallery main {
     display: flex;
     flex-wrap: wrap;
 }
 
-/* Icons */
-.icon {
+/* line 77, C:/Users/chris/Desktop/test.scss */
+#gallery .icon {
     display: block;
     width: 1.5em;
     height: 1.5em;
@@ -81,7 +100,8 @@ main {
     fill: currentColor;
 }
 
-.content--side {
+/* line 85, C:/Users/chris/Desktop/test.scss */
+#gallery .content--side {
     position: relative;
     z-index: 100;
     width: 15vw;
@@ -91,17 +111,20 @@ main {
     order: 2;
 }
 
-.content--center {
+/* line 95, C:/Users/chris/Desktop/test.scss */
+#gallery .content--center {
     flex: 1;
     max-width: calc(100vw - 260px);
     order: 3;
 }
 
-.content--right {
+/* line 101, C:/Users/chris/Desktop/test.scss */
+#gallery .content--right {
     order: 4;
 }
 
-.content--related {
+/* line 105, C:/Users/chris/Desktop/test.scss */
+#gallery .content--related {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -111,34 +134,39 @@ main {
     order: 5;
 }
 
-.media-related {
+/* line 115, C:/Users/chris/Desktop/test.scss */
+#gallery .media-related {
     width: 100%;
 }
 
-.media-item {
+/* line 119, C:/Users/chris/Desktop/test.scss */
+#gallery .media-item {
     padding: 1em;
 }
 
-.media-item__img {
+/* line 123, C:/Users/chris/Desktop/test.scss */
+#gallery .media-item__img {
     max-width: 100%;
     opacity: 0.7;
     transition: opacity 0.3s;
 }
 
-.media-item:hover .media-item__img,
-.media-item:focus .media-item__img {
+/* line 129, C:/Users/chris/Desktop/test.scss */
+#gallery .media-item:hover .media-item__img,
+#gallery .media-item:focus .media-item__img {
     opacity: 1;
 }
 
-.media-item__title {
+/* line 134, C:/Users/chris/Desktop/test.scss */
+#gallery .media-item__title {
     font-size: 1em;
     max-width: 220px;
     padding: 0.5em;
     margin: 0 auto;
 }
 
-/* Header */
-.codrops-header {
+/* line 142, C:/Users/chris/Desktop/test.scss */
+#gallery .codrops-header {
     position: relative;
     z-index: 100;
     display: flex;
@@ -148,7 +176,8 @@ main {
     order: 1;
 }
 
-.codrops-header__title {
+/* line 152, C:/Users/chris/Desktop/test.scss */
+#gallery .codrops-header__title {
     font-size: 1em;
     font-weight: normal;
     flex: 1;
@@ -157,8 +186,9 @@ main {
     text-transform: lowercase;
 }
 
-.codrops-header__title::before,
-.codrops-header__title::after {
+/* line 161, C:/Users/chris/Desktop/test.scss */
+#gallery .codrops-header__title::before,
+#gallery .codrops-header__title::after {
     font-size: 22px;
     font-weight: bold;
     display: inline-block;
@@ -166,23 +196,26 @@ main {
     color: #42454c;
 }
 
-.codrops-header__title::after {
+/* line 170, C:/Users/chris/Desktop/test.scss */
+#gallery .codrops-header__title::after {
     content: '\2309';
     vertical-align: sub;
 }
 
-.codrops-header__title::before {
+/* line 175, C:/Users/chris/Desktop/test.scss */
+#gallery .codrops-header__title::before {
     content: '\230A';
 }
 
-/* GitHub corner */
-.github-corner {
+/* line 180, C:/Users/chris/Desktop/test.scss */
+#gallery .github-corner {
     position: absolute;
     top: 0;
     right: 0;
 }
 
-.github-corner__svg {
+/* line 186, C:/Users/chris/Desktop/test.scss */
+#gallery .github-corner__svg {
     fill: #82888a;
     color: #2c2d31;
     position: absolute;
@@ -191,7 +224,8 @@ main {
     right: 0;
 }
 
-.github-corner:hover .octo-arm {
+/* line 195, C:/Users/chris/Desktop/test.scss */
+#gallery .github-corner:hover .octo-arm {
     animation: octocat-wave 560ms ease-in-out;
 }
 
@@ -211,17 +245,18 @@ main {
 }
 
 @media (max-width: 500px) {
-    .github-corner:hover .octo-arm {
+    /* line 215, C:/Users/chris/Desktop/test.scss */
+    #gallery .github-corner:hover .octo-arm {
         animation: none;
     }
-
-    .github-corner .octo-arm {
+    /* line 219, C:/Users/chris/Desktop/test.scss */
+    #gallery .github-corner .octo-arm {
         animation: octocat-wave 560ms ease-in-out;
     }
 }
 
-/* Top Navigation Style */
-.codrops-links {
+/* line 225, C:/Users/chris/Desktop/test.scss */
+#gallery .codrops-links {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -233,7 +268,8 @@ main {
     background: #1f2125;
 }
 
-.codrops-links::after {
+/* line 237, C:/Users/chris/Desktop/test.scss */
+#gallery .codrops-links::after {
     content: '';
     position: absolute;
     top: -10%;
@@ -244,18 +280,20 @@ main {
     transform: rotate3d(0, 0, 1, 22.5deg);
 }
 
-.codrops-icon {
+/* line 248, C:/Users/chris/Desktop/test.scss */
+#gallery .codrops-icon {
     display: inline-block;
     padding: 0 0.65em;
 }
 
-/* Controls */
-.control--grids {
+/* line 254, C:/Users/chris/Desktop/test.scss */
+#gallery .control--grids {
     margin: 0 0 2.5em;
     text-align: right;
 }
 
-.control__title {
+/* line 259, C:/Users/chris/Desktop/test.scss */
+#gallery .control__title {
     font-size: 0.85em;
     display: block;
     width: 100%;
@@ -263,13 +301,15 @@ main {
     color: #e6629a;
 }
 
-.control__item {
+/* line 267, C:/Users/chris/Desktop/test.scss */
+#gallery .control__item {
     position: relative;
     display: block;
     margin: 0 0 0.5em;
 }
 
-.control__radio {
+/* line 273, C:/Users/chris/Desktop/test.scss */
+#gallery .control__radio {
     position: absolute;
     z-index: 10;
     top: 0;
@@ -280,21 +320,25 @@ main {
     opacity: 0;
 }
 
-.control__label {
+/* line 284, C:/Users/chris/Desktop/test.scss */
+#gallery .control__label {
     white-space: nowrap;
 }
 
-.control__radio:checked + .control__label {
+/* line 288, C:/Users/chris/Desktop/test.scss */
+#gallery .control__radio:checked + .control__label {
     color: #fff;
     background: #673ab7;
 }
 
-.control__radio:not(:checked):hover + .control__label,
-.control__btn:hover {
+/* line 293, C:/Users/chris/Desktop/test.scss */
+#gallery .control__radio:not(:checked):hover + .control__label,
+#gallery .control__btn:hover {
     color: white;
 }
 
-.control__btn {
+/* line 298, C:/Users/chris/Desktop/test.scss */
+#gallery .control__btn {
     display: block;
     width: 100%;
     margin: 0 0 0.5em;
@@ -305,20 +349,21 @@ main {
     background: none;
 }
 
-.control__btn:focus {
+/* line 309, C:/Users/chris/Desktop/test.scss */
+#gallery .control__btn:focus {
     outline: none;
 }
 
-/* Grid */
-
-.grid {
+/* line 315, C:/Users/chris/Desktop/test.scss */
+#gallery .grid {
     position: relative;
     z-index: 2;
     display: block;
     margin: 0 auto;
 }
 
-.grid--hidden {
+/* line 322, C:/Users/chris/Desktop/test.scss */
+#gallery .grid--hidden {
     position: fixed !important;
     z-index: 1;
     top: 0;
@@ -328,13 +373,15 @@ main {
     opacity: 0;
 }
 
-.js .grid--loading::before,
-.js .grid--loading::after {
+/* line 332, C:/Users/chris/Desktop/test.scss */
+#gallery .js .grid--loading::before,
+#gallery .js .grid--loading::after {
     content: '';
     z-index: 1000;
 }
 
-.js .grid--loading::before {
+/* line 338, C:/Users/chris/Desktop/test.scss */
+#gallery .js .grid--loading::before {
     position: fixed;
     top: 0;
     left: 0;
@@ -343,7 +390,8 @@ main {
     background: #2c2d31;
 }
 
-.js .grid--loading::after {
+/* line 347, C:/Users/chris/Desktop/test.scss */
+#gallery .js .grid--loading::after {
     position: absolute;
     top: calc(25vh - 20px);
     left: 50%;
@@ -356,33 +404,39 @@ main {
     animation: animLoader 0.8s linear forwards infinite;
 }
 
-.grid__sizer {
+/* line 360, C:/Users/chris/Desktop/test.scss */
+#gallery .grid__sizer {
     margin-bottom: 0 !important;
 }
 
-.grid__link,
-.grid__img {
+/* line 364, C:/Users/chris/Desktop/test.scss */
+#gallery .grid__link,
+#gallery .grid__img {
     display: block;
 }
 
-.grid__img {
+/* line 369, C:/Users/chris/Desktop/test.scss */
+#gallery .grid__img {
     width: 100%;
 }
 
-.grid__deco {
+/* line 373, C:/Users/chris/Desktop/test.scss */
+#gallery .grid__deco {
     position: absolute;
     top: 0;
     left: 0;
     pointer-events: none;
 }
 
-.grid__deco path {
+/* line 380, C:/Users/chris/Desktop/test.scss */
+#gallery .grid__deco path {
     fill: none;
     stroke: #fff;
     stroke-width: 2px;
 }
 
-.grid__reveal {
+/* line 386, C:/Users/chris/Desktop/test.scss */
+#gallery .grid__reveal {
     position: absolute;
     z-index: 50;
     top: 0;
@@ -394,85 +448,94 @@ main {
     background-color: #2c2d31;
 }
 
-.grid .grid__item,
-.grid .grid__sizer {
+/* line 398, C:/Users/chris/Desktop/test.scss */
+#gallery .grid .grid__item,
+#gallery .grid .grid__sizer {
     width: calc(50% - 20px);
     margin: 0 10px 20px;
 }
 
 @media screen and (min-width: 60em) {
-    .grid .grid__item,
-    .grid .grid__sizer {
+    /* line 405, C:/Users/chris/Desktop/test.scss */
+    #gallery .grid .grid__item,
+    #gallery .grid .grid__sizer {
         width: calc((100% / 3) - 20px);
         margin: 0 10px 20px;
     }
 }
 
 @media screen and (min-width: 70em) {
-    .grid .grid__item,
-    .grid .grid__sizer {
+    /* line 1, C:/Users/chris/Desktop/test.scss */
+    #gallery {
+        /* Grid types */
+    }
+    /* line 413, C:/Users/chris/Desktop/test.scss */
+    #gallery .grid .grid__item,
+    #gallery .grid .grid__sizer {
         width: calc(25% - 30px);
         margin: 0 15px 30px;
     }
-
-    /* Grid types */
-    .grid--type-b .grid__item,
-    .grid--type-b .grid__sizer {
+    /* line 420, C:/Users/chris/Desktop/test.scss */
+    #gallery .grid--type-b .grid__item,
+    #gallery .grid--type-b .grid__sizer {
         width: calc(20% - 20px);
         margin: 0 10px 20px;
     }
-
-    .grid--type-c .grid__item,
-    .grid--type-c .grid__sizer {
+    /* line 426, C:/Users/chris/Desktop/test.scss */
+    #gallery .grid--type-c .grid__item,
+    #gallery .grid--type-c .grid__sizer {
         width: calc(25% - 16px);
         margin: 0 8px 16px;
     }
 }
 
 @media screen and (max-width: 50em) {
-    main {
+    /* line 434, C:/Users/chris/Desktop/test.scss */
+    #gallery main {
         display: block;
     }
-
-    .codrops-header {
+    /* line 438, C:/Users/chris/Desktop/test.scss */
+    #gallery .codrops-header {
         padding: 1em;
         flex-wrap: wrap;
     }
-
-    .codrops-links {
+    /* line 443, C:/Users/chris/Desktop/test.scss */
+    #gallery .codrops-links {
         margin: 0;
     }
-
-    .codrops-header__title {
+    /* line 447, C:/Users/chris/Desktop/test.scss */
+    #gallery .codrops-header__title {
         width: 100%;
         text-align: left;
         flex: none;
         margin: 1em 0;
     }
-
-    .content--side {
+    /* line 454, C:/Users/chris/Desktop/test.scss */
+    #gallery .content--side {
         width: 100%;
     }
-
-    .content--right {
+    /* line 458, C:/Users/chris/Desktop/test.scss */
+    #gallery .content--right {
         order: 3;
     }
-
-    .content--center {
+    /* line 462, C:/Users/chris/Desktop/test.scss */
+    #gallery .content--center {
         max-width: 100vw;
     }
-
-    .control {
+    /* line 466, C:/Users/chris/Desktop/test.scss */
+    #gallery .control {
         margin: 0 0 1em;
         text-align: left;
     }
-
-    .control__item,
-    .control__btn {
+    /* line 471, C:/Users/chris/Desktop/test.scss */
+    #gallery .control__item,
+    #gallery .control__btn {
         display: inline-block;
     }
-
-    .control__btn {
+    /* line 476, C:/Users/chris/Desktop/test.scss */
+    #gallery .control__btn {
         width: auto;
     }
 }
+
+/*# sourceMappingURL=sass/test.map */

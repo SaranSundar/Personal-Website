@@ -1,3 +1,20 @@
+@import url('http://fonts.googleapis.com/css?family=Alegreya+Sans:300');
+
+@font-face {
+    font-family: 'Raleway';
+    src: url("../fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Raleway-semibold';
+    src: url("../fonts/Raleway-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: 'Raleway-bold';
+    src: url("../fonts/Raleway-Bold.ttf");
+}
+
 body {
     background: #000;
 }
@@ -8,7 +25,8 @@ body {
 }
 
 .shimmer {
-    color: rgba(255, 255, 255, 0.8) !important;
+    text-align: center;
+    color: rgba(255,255,255,0.1);
     background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
     background: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
     background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
@@ -28,7 +46,8 @@ body {
     -moz-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     background-repeat: no-repeat;
-    background-color: #222 !important;
+    background-position: 0 0;
+    background-color: #222;
 }
 
 @-moz-keyframes shimmer {

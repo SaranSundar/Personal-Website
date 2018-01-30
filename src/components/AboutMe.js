@@ -1,20 +1,20 @@
 import React, {Component} from 'react';
 import $ from "jquery";
+import selfie from "../drawables/self.jpeg"
 
 class AboutMe extends Component {
 
     componentDidMount() {
-        $('*').css({'overflow': 'hidden'});
+        $('*').css({'overflow': 'hidden'})
     }
-
     render() {
         return (
 
-            <section className="hero is-fullheight aboutMeImage">
+            <section className="hero is-fullheight aboutMeImage" id="about-me">
                 <div className="field has-addons has-addons-centered is-light" style={{marginTop: '40px'}}>
                     <p className="control">
                         <img className="profile"
-                             src="https://scontent-dft4-2.xx.fbcdn.net/v/t1.0-9/14446031_1303187519738245_5581739972931163004_n.jpg?oh=add000ed06428de065786ff83900ac34&oe=5A6704A4"
+                             src={selfie}
                              alt="Saran" width={window.innerWidth / 4} height={window.innerHeight / 4}/>
                     </p>
                 </div>
@@ -24,7 +24,7 @@ class AboutMe extends Component {
                         <h1 className="title is-1" style={{color: '#ffffff'}}>
                             Saran Sundararajan
                         </h1>
-                        <h2 className="subtitle is-3" style={{color: '#e3eaef'}}>
+                        <h2 className="subtitle is-3" style={{color: '#ffffff', fontWeight: "bold"}}>
                             A student by day and passionate developer by night, always looking to throw myself forward
                             into the next big challenge
                         </h2>

@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import $ from 'jquery'
-
+import React, {Component, Fragment} from 'react';
+import bg_opt from "../drawables/bg_opt.jpg"
+import $ from "jquery";
 
 class Home extends Component {
 
@@ -11,24 +11,24 @@ class Home extends Component {
 
     render() {
         return (
-            <div className="loadImage" id="content">
-                {/*THIS IS THE BIG STARTING TEXT*/}
-                <section className="hero is-medium">
-                    <div className="hero-body">
-                        <div className="container">
-                            <div className="control has-text-centered">
-                                <h1 className="title is-1" style={{color: "#ffffff"}}>
-                                    Saran Sundar
-                                </h1>
-                                <h2 className="subtitle is-4 shimmer">
-                                    An Experienced Mobile/Web Developer
-                                </h2>
-                            </div>
+            <Fragment>
+                <div style={{backgroundColor: "#42f4f4"}}>
+
+                    <figure className="image">
+                        {/*THIS IS THE BIG STARTING TEXT*/}
+                        <div className="control has-text-centered" id="title">
+                            <h1 className="title is-1" style={{color: "#ffffff"}}>
+                                Saran Sundar
+                            </h1>
+                            <h2 className="subtitle is-4 shimmer">
+                                An Experienced Mobile/Web Developer
+                            </h2>
                         </div>
-                    </div>
-                </section>
-                {/*<div className="accent"></div>*/}
-            </div>
+                        <img src={bg_opt} style={{objectFit: "cover"}}/>
+                    </figure>
+
+                </div>
+            </Fragment>
         );
     }
 }

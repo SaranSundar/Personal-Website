@@ -15,6 +15,11 @@
     src: url("../fonts/Raleway-Bold.ttf");
 }
 
+.outlineText {
+    -webkit-text-stroke: 0.0px #000000;
+    -webkit-text-fill-color: #FFFFFF
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -49,3 +54,231 @@ body {
 .profile {
     border-radius: 50%;
 }
+
+
+
+svg{
+    z-index: 999;
+    position: relative;
+    margin: auto;
+    transform: scale(1.6);
+    overflow: visible;
+}
+
+path{
+    stroke-width: 18;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.has-margin-bottom{
+    margin-bottom: 20px;
+}
+
+.has-big-margin-bottom{
+    margin-bottom: 60px;
+}
+.has-margin-top{
+    margin-top: 40px;
+}
+
+.dropzone-wrapper > div{
+    width: 87% !important;
+    height: 87% !important;
+}
+
+
+body::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar
+{
+    width: 7px;
+    background-color: #C1C1C1;
+}
+body::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #C1C1C1;
+}
+
+.gallery-image{
+    max-width: 80%;
+    height: auto;
+}
+
+.animated{
+    width: auto;
+    height: auto;
+    position: relative;
+    text-align: center;
+}
+
+.animated h1 {
+    width: auto;
+    height: auto;
+    display: block;
+    color: #0f81cc;
+    transform: scale(0);
+    animation: reveal3 0.35s ease-out forwards;
+    animation-delay: 1.1s;
+}
+
+.animated h2 {
+    width: auto;
+    height: auto;
+    display: block;
+    color: #00b89c;
+    transform: scale(0);
+    animation: reveal3 0.35s ease-out forwards;
+    animation-delay: 1.1s;
+}
+
+.animated img{
+    width: auto;
+    height: auto;
+    position: center;
+    display: block;
+    transform: scale(0);
+    animation: reveal3 0.35s ease-out forwards;
+    animation-delay: 1.1s;
+}
+
+@keyframes reveal3{
+    0%{
+        transform: scale(0);
+    }
+    30%{
+        transform: scale(.3);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.animated::before{
+    opacity: 1;
+    content: ' ';
+    display: block;
+    width: 0;
+    height: 0;
+    border: 2px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    border-radius: 2px;
+    animation: reveal1 .3s linear forwards, hide .3s linear forwards;
+    animation-delay: .3s, 1s;
+}
+
+@keyframes reveal1{
+    0%{
+        width: 0;
+        height: 0;
+        border-top-color: black;
+        border-top-color: black;
+    }
+    50%{
+        width: 100%;
+        height: 0;
+        border-top-color: black;
+        border-right-color: black;
+    }
+    100%{
+        height: 100%;
+        width: 100%;
+        border-right-color: black;
+        border-top-color: black;
+    }
+}
+
+.animated::after{
+    content: ' ';
+    width: 0;
+    height: 0;
+    display: block;
+    border: 2px solid transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 2px;
+    box-sizing: border-box;
+    animation: reveal2 .6s ease-out forwards, hide .3s linear forwards;
+    animation-delay: .6s, 1s;
+}
+
+@keyframes reveal2{
+    0%{
+        width: 0;
+        height: 0;
+        border-left-color: black;
+        border-bottom-color: black;
+    }
+    50%{
+        width: 100%;
+        height: 0;
+        border-left-color: black;
+        border-bottom-color: black;
+    }
+    100%{
+        height: 100%;
+        width: 100%;
+        border-left-color: black;
+        border-bottom-color: black;
+    }
+}
+
+@keyframes hide {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+/* Bet winning code from here on down
+
+#about-me{
+    max-height: calc(100vh - 3.25rem) !important;
+}
+
+.hero.is-fullheight {
+    min-height: 0;
+}
+
+#content{
+    max-height: calc(100vh - 3.25rem) !important;
+}
+
+body::-webkit-scrollbar {
+     display: none;
+ }
+
+.long{
+    overflow: hidden;
+}
+
+.long-wrapper{
+    overflow-y: scroll;
+    max-height: calc(100vh - 3.25rem) !important;
+}
+
+.long::-webkit-scrollbar {
+    display: block !important;
+} */
+
+#title{
+    position: absolute;
+    left: 0;  /* the left and right properties move it left nd right */
+    right: 0;
+    top: 10%; /*CHANGE THIS TO MOVE THE MAIN TITLE UP OR DOWN. Bigger = down, smaller = up */
+}
+

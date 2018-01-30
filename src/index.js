@@ -1,31 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
-import {BrowserRouter, Route, Switch} from "react-router-dom";
-import Home from "./components/Home";
-import AboutMe from "./components/AboutMe";
-import NotFound from "./components/NotFound";
-import Resume from "./components/Resume";
+import {BrowserRouter} from "react-router-dom";
 
-import 'normalize.css'
+
 import 'bulma/css/bulma.css'
 import './css/index.css'
+import './css/bulma-pageloader.sass'
+import './css/bulma-pageloader.css'
+import './css/pageloader.sass'
 
-import NavBar from "./components/NavBar";
-import Portfolio from "./components/Portfolio";
+import "./css/shimmercss.css"
+import App from "./components/App";
+
 
 ReactDOM.render(
     <BrowserRouter>
-        <div>
-            <NavBar/>
-            <Switch>
-                <Route exact path="/" component={Home}/>
-                <Route exact path="/aboutme" component={AboutMe}/>
-                <Route exact path="/portfolio" component={Portfolio}/>
-                <Route exact path="/resume" component={Resume}/>
-                <Route component={NotFound}/>
-            </Switch>
-        </div>
+        <App/>
     </BrowserRouter>
     , document.getElementById('root'));
 registerServiceWorker();

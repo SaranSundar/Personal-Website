@@ -42,6 +42,9 @@ class NavBar extends Component {
                             <Link className="navbar-item" to="/resume">
                                 Resume
                             </Link>
+                            {/*<Link className="navbar-item" to="/admin/upload">*/}
+                            {/*Upload*/}
+                            {/*</Link>*/}
                         </div>
                         <div className="navbar-end">
                             <a className="navbar-item" href="https://github.com/SaranSundar">

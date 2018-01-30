@@ -1,10 +1,17 @@
 {
-  "main.css": "static/css/main.7d9ef14b.css",
-  "main.css.map": "static/css/main.7d9ef14b.css.map",
-  "main.js": "static/js/main.99310fa8.js",
-  "main.js.map": "static/js/main.99310fa8.js.map",
-  "static/media/aboutbg.jpg": "static/media/aboutbg.4fb412d5.jpg",
+  "main.css": "static/css/main.2bfaac8b.css",
+  "main.css.map": "static/css/main.2bfaac8b.css.map",
+  "main.js": "static/js/main.c69b2d75.js",
+  "main.js.map": "static/js/main.c69b2d75.js.map",
+  "static/media/Raleway-Bold.ttf": "static/media/Raleway-Bold.575e4317.ttf",
+  "static/media/Raleway-Regular.ttf": "static/media/Raleway-Regular.580d0778.ttf",
+  "static/media/Raleway-SemiBold.ttf": "static/media/Raleway-SemiBold.17ba6410.ttf",
+  "static/media/aboutbg.jpg": "static/media/aboutbg.21d1c7ae.jpg",
   "static/media/bg.jpg": "static/media/bg.9799dd39.jpg",
+  "static/media/bg_opt.jpg": "static/media/bg_opt.7c7325c5.jpg",
+  "static/media/bulma-pageloader.sass": "static/media/bulma-pageloader.db4a751e.sass",
   "static/media/github_cat.svg": "static/media/github_cat.e92cab6d.svg",
-  "static/media/resume.png": "static/media/resume.3b0a800b.png"
+  "static/media/pageloader.sass": "static/media/pageloader.d880e270.sass",
+  "static/media/resume.png": "static/media/resume.3b0a800b.png",
+  "static/media/self.jpeg": "static/media/self.c8ac9967.jpeg"
 }

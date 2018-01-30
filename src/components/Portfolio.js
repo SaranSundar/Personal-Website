@@ -1,121 +1,125 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
+import firebase from './firebase.js';
 import $ from "jquery";
 
 class Portfolio extends Component {
 
-    handleClick = (e) => {
-        let id = e.currentTarget.dataset.id;
-        let allActive = "";
-        let javaS = "";
-        let androidS = "";
-        let reactS = "";
-        let stateActive = "is-active";
-        // console.log(e.currentTarget.dataset.id)
-        if (id === "0") {
-            allActive = stateActive;
-        }
-        else if (id === "1") {
-            javaS = stateActive;
-        }
-        else if (id === "2") {
-            androidS = stateActive;
-        }
-        else if (id === "3") {
-            reactS = stateActive;
-        }
-        this.setState({allActive: allActive, javaActive: javaS, androidActive: androidS, reactJSActive: reactS});
-    };
-
     constructor(props) {
         super(props);
         this.state = {
-            allActive: "is-active",
-            javaActive: "",
-            androidActive: "",
-            reactJSActive: ""
+            galleryList: null,
+            items: [],
+            modalVisible: false,
+            itemClicked: "",
         };
+
     }
 
     componentDidMount() {
         $('*').css({'overflow': 'visible'});
+        const itemsRef = firebase.database().ref('projects');
+        itemsRef.on('value', (snapshot) => {
+            let items = snapshot.val();
+            let newState = [];
+            for (let key in items) {
+                let item = items[key];
+                newState.push({
+                    id: item,
+                    img: item.img,
+                    name: item.name,
+                    description: item.description,
+                    type: item.type,
+                    price: item.price
+                });
+            }
+            let pics = newState;//["https://scontent-dft4-2.xx.fbcdn.net/v/t1.0-9/20799075_337523973365733_2638514073442649981_n.jpg?oh=0c768158eb59cd34f8171ca24c2b8e8b&oe=5AE9D165", "https://scontent-dft4-2.xx.fbcdn.net/v/t1.0-9/20882979_337523980032399_7504336161037352846_n.jpg?oh=a5e9104c0cdb1945558648ecf9dee207&oe=5AF6A0B7", "https://scontent-dft4-2.xx.fbcdn.net/v/t1.0-9/16683975_251800761938055_7725494421849808068_n.jpg?oh=f193b8e20e2e7113bd515f0d7d2ad192&oe=5AF9A23A", "https://scontent-dft4-2.xx.fbcdn.net/v/t1.0-9/17800495_280074535777344_1481065280017315874_n.jpg?oh=5bc3b35012cf28ae3c31da79bede7886&oe=5AB0DF87", "https://scontent-dft4-2.xx.fbcdn.net/v/t1.0-9/15740873_226904387761026_1224162871519400527_n.jpg?oh=513917e6328a1197e30207bebc5a9b45&oe=5AF2FC1E", "https://scontent-dft4-2.xx.fbcdn.net/v/t31.0-8/14570791_186576781793787_8919324870054482273_o.jpg?oh=772dce3cb245810635cac236c2d81b2e&oe=5AB73011"];
+            // let fragments = [];
+            // let columns = 3;
+            // for (let i = 0; i < pics.length / columns; i++) {
+            //     let x = i * columns;
+            //     let part = pics.slice(x, x + columns);
+            //     let innerElements = part.map((item, i) =>
+            //         <Fragment key={"item-" + i}>
+            //             <div className="column is-4-desktop has-text-centered">
+            //                 <div className={"animated num"+i}>
+            //                     <img src={item.img} alt="FOOD" onClick={() => this.showModal(item)}/>
+            //                 </div>
+            //             </div>
+            //         </Fragment>
+            //     );
+            //     let parentElement = (
+            //         <div className="container has-margin-top">
+            //             <div className="columns is-multiline">
+            //                 {innerElements}
+            //             </div>
+            //         </div>
+            //     );
+            //     fragments.push(parentElement);
+            // }
+            //
+            // let list = fragments.map((item, i) =>
+            //     <Fragment key={"item-" + i}>
+            //         {item}
+            //     </Fragment>
+            // );
+            this.setState({allImagesLoaded: pics.length});
+            let list = pics.map((item, i) =>
+                <Fragment key={"item-" + i}>
+                    <div className="column is-4-desktop has-text-centered">
+                        <div className={"animated num" + i} onClick={() => this.showModal(item)}>
+                            <h1 className="title" style={{textAlign: "center"}}>{item.name}</h1>
+                            <img src={item.img} alt="FOOD" style={{objectFit: "cover", textAlign: "center"}}/>
+                            <h2 className="subtitle" style={{textAlign: "center"}}>{item.description}</h2>
+                        </div>
+                    </div>
+                </Fragment>
+            );
+            this.setState({
+                galleryList: list
+            });
+            //Cancer code below here
+            var boxes = document.querySelectorAll('.animated');
+            for (let i = 0; i < boxes.length; i++) {
+                var img = boxes[i].firstChild;
+                var style = getComputedStyle(img);
+                var newStyle = "animation-delay: " + (parseFloat(style.animationDelay) + (.2 * i)) + "s;";
+                img.setAttribute("style", newStyle);
+                style = getComputedStyle(boxes[i], ':before');
+                newStyle = ".num" + i + "::before{animation-delay: " + (parseFloat(style.animationDelay.substring(0, 3)) + (.2 * i)) + "s, " + (parseFloat(style.animationDelay.substring(6)) + (.2 * i)) + "s;}";
+                var sheet = document.createElement('style');
+                sheet.type = 'text/css';
+                sheet.innerHTML = newStyle;
+                console.log(newStyle);
+                document.getElementsByTagName('head')[0].appendChild(sheet);
+                style = getComputedStyle(boxes[i], ':after');
+                newStyle = ".num" + i + "::after{animation-delay: " + (parseFloat(style.animationDelay.substring(0, 3)) + (.2 * i)) + "s, " + (parseFloat(style.animationDelay.substring(6)) + (.2 * i)) + "s;}";
+                var sheet = document.createElement('style');
+                sheet.type = 'text/css';
+                sheet.innerHTML = newStyle;
+                console.log(newStyle);
+                document.getElementsByTagName('head')[0].appendChild(sheet);
+
+            }
+        });
     }
 
+    showModal = (item) => {
+        window.open(item.price)
+    };
+
     render() {
-        let imgHeight = window.innerHeight - 40;//this.state.imgHeight * 2;
+
         return (
-            <div className="container">
-
-                <section style={{marginBottom: "50px"}}></section>
-                <div className="tabs is-large is-centered">
-                    <ul>
-                        {/*//BINDING LIKE this.method(this) or any form of that gets called at runtime!!!!!*/}
-                        <li className={this.state.allActive} onClick={this.handleClick} data-id="0"><a>All</a>
-                        </li>
-                        <li className={this.state.javaActive} onClick={this.handleClick} data-id="1"><a>Java</a>
-                        </li>
-                        <li className={this.state.androidActive} onClick={this.handleClick} data-id="2">
-                            <a>Android</a>
-                        </li>
-                        <li className={this.state.reactJSActive} onClick={this.handleClick} data-id="3">
-                            <a>ReactJS</a>
-                        </li>
-                    </ul>
-                </div>
-                <div className="tile is-ancestor">
-                    <div className="tile is-vertical is-8">
-                        <div className="tile">
-                            <div className="tile is-parent is-vertical">
-                                <article className="tile is-child notification is-primary">
-                                    <p className="title">Vertical...</p>
-                                    <p className="subtitle">Top tile</p>
-                                </article>
-                                <article className="tile is-child notification is-warning">
-                                    <p className="title">...tiles</p>
-                                    <p className="subtitle">Bottom tile</p>
-                                </article>
-                            </div>
-                            <div className="tile is-parent">
-                                <article className="tile is-child notification is-info">
-                                    <p className="title">Middle tile</p>
-                                    <p className="subtitle">With an image</p>
-                                    <figure className="image is-4by3">
-                                        <img src="https://bulma.io/images/placeholders/640x480.png"/>
-                                    </figure>
-                                </article>
-                            </div>
-                        </div>
-                        <div className="tile is-parent">
-                            <article className="tile is-child notification is-danger">
-                                <p className="title">Wide tile</p>
-                                <p className="subtitle">Aligned with the right tile</p>
-                                <div className="content">
-
-                                </div>
-                            </article>
+            <div style={{backgroundColor: "white"}}>
+                <div className="long has-margin-bottom">
+                    <div className="long-wrapper">
+                    </div>
+                    <div className="container has-margin-top">
+                        <div className="columns is-multiline">
+                            {this.state.galleryList}
                         </div>
                     </div>
-                    <div className="tile is-parent">
-                        <article className="tile is-child notification is-success">
-                            <div className="content">
-                                <p className="title">Tall tile</p>
-                                <p className="subtitle">With even more content</p>
-                                <div className="content">
-
-                                </div>
-                            </div>
-                        </article>
-                    </div>
                 </div>
-                <h1>HELLO</h1>
-                <h1>HELLO</h1>
-                <h1>HELLO</h1>
-                <h1>HELLO</h1>
-                <h1>HELLO</h1>
-                <h1>HELLO</h1>
-                <h1>HELLO</h1>
-                <h1>HELLO</h1>
-
-
             </div>
 
         );
