@@ -30,7 +30,7 @@ class App extends Component {
             <Fragment>
                 <div className={"pageloader " + this.state.loadingState}>
 
-                    <span className="control has-text-centered title">“Don't try to follow trends. Create them.” <br/>
+                    <span className="control has-text-centered title">“Nothing is hard once you learn it...” <br/>
                     <span>― Some Wise Man</span>
                     </span>
                 </div>

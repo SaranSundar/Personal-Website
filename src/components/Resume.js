@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import resume from '../drawables/resume.png'
+import resume from '../drawables/NEW_RESUME-1.png'
 import $ from "jquery";
 
 

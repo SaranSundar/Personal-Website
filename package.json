@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "deploy": "npm run build && mv build/index.html build/200.html && surge build http://saransundar.surge.sh/",
+    "deploy": "npm run build && mv build/index.html build/200.html && surge build https://saransundar.surge.sh/",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

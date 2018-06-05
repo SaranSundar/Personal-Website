@@ -15,10 +15,6 @@
     src: url("../fonts/Raleway-Bold.ttf");
 }
 
-body {
-    background: #000;
-}
-
 .shimmer {
     font-weight: 300;
     font-size: 1.5em !important;
